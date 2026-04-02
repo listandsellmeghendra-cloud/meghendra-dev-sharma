@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Meghendra Dev Sharma | SEO Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--primary:#0f4c81;--accent:#00c9a7;--dark:#0d1117;--dark2:#161b22;--card:#1c2333;--text:#e6edf3;--muted:#8b949e;--border:#30363d;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;}
+::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--dark);}::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,#00c9a7,#0f4c81);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s;}
+.nav-links a:hover{color:var(--accent);}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 5% 80px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(0,201,167,0.08) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(15,76,129,0.15) 0%,transparent 60%);pointer-events:none;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,201,167,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,201,167,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.hero-content{max-width:700px;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);color:var(--accent);padding:6px 16px;border-radius:50px;font-size:0.8rem;font-weight:600;margin-bottom:24px;letter-spacing:0.5px;}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:16px;}
+.hero h1 span{background:linear-gradient(135deg,#00c9a7,#4facfe);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-title{font-size:1.3rem;color:var(--accent);font-weight:600;margin-bottom:16px;}
+.hero-desc{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:32px;max-width:580px;}
+.hero-contact{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.hero-contact a,.hero-contact span{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:0.85rem;text-decoration:none;transition:color 0.3s;}
+.hero-contact a:hover{color:var(--accent);}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#0f4c81);color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:transform 0.3s,box-shadow 0.3s;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,201,167,0.3);}
+.btn-outline{border:1px solid var(--border);color:var(--text);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.3s;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.hero-visual{position:absolute;right:5%;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:16px;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;text-align:center;min-width:130px;}
+.stat-card .num{font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:700;color:var(--accent);}
+.stat-card .lbl{font-size:0.75rem;color:var(--muted);}
+section{padding:80px 5%;}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-tag{display:inline-block;background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);color:var(--accent);padding:4px 14px;border-radius:50px;font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+.section-header h2{font-family:'Poppins',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;}
+.section-header p{color:var(--muted);margin-top:10px;font-size:1rem;}
+.skills-bg{background:var(--dark2);}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+.skill-cat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:transform 0.3s,border-color 0.3s;}
+.skill-cat:hover{transform:translateY(-4px);border-color:var(--accent);}
+.skill-cat-icon{font-size:2rem;margin-bottom:12px;}
+.skill-cat h3{font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--text);}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.skill-tag{background:rgba(0,201,167,0.08);border:1px solid rgba(0,201,167,0.2);color:#a8d8cf;padding:5px 12px;border-radius:6px;font-size:0.78rem;font-weight:500;}
+.exp-timeline{position:relative;max-width:900px;margin:0 auto;}
+.exp-timeline::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--primary));}
+.exp-item{display:flex;gap:24px;margin-bottom:40px;position:relative;}
+.exp-dot{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--primary));display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem;z-index:1;}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;flex:1;transition:border-color 0.3s;}
+.exp-card:hover{border-color:var(--accent);}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+.exp-role{font-weight:700;font-size:1.1rem;color:var(--text);}
+.exp-period{background:rgba(0,201,167,0.1);color:var(--accent);padding:3px 10px;border-radius:50px;font-size:0.75rem;font-weight:600;}
+.exp-company{color:var(--accent);font-size:0.9rem;font-weight:600;margin-bottom:14px;}
+.exp-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.exp-card li{color:var(--muted);font-size:0.9rem;padding-left:18px;position:relative;line-height:1.6;}
+.exp-card li::before{content:'\25B8';position:absolute;left:0;color:var(--accent);}
+.projects-bg{background:var(--dark2);}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+.project-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform 0.3s,border-color 0.3s;}
+.project-card:hover{transform:translateY(-4px);border-color:var(--accent);}
+.project-img-placeholder{width:100%;height:200px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f4c81,#00c9a7);font-size:3rem;}
+.project-body{padding:24px;}
+.project-body h3{font-size:1rem;font-weight:700;margin-bottom:8px;}
+.project-body p{color:var(--muted);font-size:0.87rem;line-height:1.7;margin-bottom:14px;}
+.project-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.project-tag{background:rgba(15,76,129,0.3);border:1px solid rgba(15,76,129,0.5);color:#7eb8f7;padding:3px 10px;border-radius:6px;font-size:0.74rem;}
+.gsc-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.gsc-header{padding:16px 24px;background:rgba(0,201,167,0.05);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+.gsc-header span{font-size:0.85rem;font-weight:600;color:var(--accent);}
+.gsc-img-wrap{background:linear-gradient(135deg,#0f2d50,#0d1117,#0a2a1e);padding:20px;}
+.gsc-stats{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:12px;}
+.gsc-stat{text-align:center;background:rgba(13,17,23,0.85);padding:12px 20px;border-radius:12px;border:1px solid rgba(0,201,167,0.3);}
+.gsc-stat .v{font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:700;color:var(--accent);}
+.gsc-stat .l{font-size:0.72rem;color:var(--muted);}
+.gsc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,201,167,0.15);border:1px solid var(--accent);color:var(--accent);padding:6px 16px;border-radius:50px;font-size:0.78rem;font-weight:600;}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto;}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:transform 0.3s,border-color 0.3s;}
+.edu-card:hover{transform:translateY(-4px);border-color:var(--accent);}
+.edu-icon{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--primary));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;}
+.edu-card h3{font-size:0.95rem;font-weight:700;margin-bottom:6px;}
+.edu-card .inst{color:var(--accent);font-size:0.85rem;font-weight:600;margin-bottom:6px;}
+.edu-card .period{color:var(--muted);font-size:0.8rem;}
+.contact-bg{background:var(--dark2);}
+.contact-wrapper{max-width:700px;margin:0 auto;text-align:center;}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px;}
+.contact-link{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);color:var(--text);text-decoration:none;padding:14px 22px;border-radius:12px;font-size:0.9rem;font-weight:500;transition:all 0.3s;}
+.contact-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.contact-link i{color:var(--accent);font-size:1.1rem;}
+footer{text-align:center;padding:32px 5%;border-top:1px solid var(--border);color:var(--muted);font-size:0.85rem;}
+footer span{color:var(--accent);}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.animate{opacity:0;}.animate.visible{animation:fadeInUp 0.6s ease forwards;}
+@media(max-width:900px){.hero-visual{display:none;}nav{padding:14px 4%;}.nav-links{gap:18px;}}
+@media(max-width:600px){.nav-links{display:none;}.hero{padding:100px 5% 60px;}}
+</style>
+</head>
+<body>
+<nav><div class="nav-logo">MDS</div><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<section class="hero" id="about">
+<div class="hero-bg"></div><div class="hero-grid"></div>
+<div class="hero-content animate">
+<div class="hero-badge"><i class="fas fa-search"></i> SEO Specialist &amp; Outreach Expert</div>
+<h1>Meghendra Dev<br/><span>Sharma</span></h1>
+<div class="hero-title">Results-driven Digital Growth Strategist</div>
+<p class="hero-desc">Hands-on experience in Local &amp; Global SEO, Conversion Rate Optimization (CRO), and LLM-driven market analysis. Delivering measurable business growth through data-driven decision-making.</p>
+<div class="hero-contact"><span><i class="fas fa-map-marker-alt"></i> Bareilly, Uttar Pradesh</span><a href="tel:8295310332"><i class="fas fa-phone"></i> 8295310332</a><a href="mailto:ms14oct2001@gmail.com"><i class="fas fa-envelope"></i> ms14oct2001@gmail.com</a></div>
+<div class="hero-btns"><a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a><a href="#experience" class="btn-outline"><i class="fas fa-briefcase"></i> View Experience</a></div>
+</div>
+<div class="hero-visual">
+<div class="stat-card animate"><div class="num">15%</div><div class="lbl">SERP Visibility Boost</div></div>
+<div class="stat-card animate"><div class="num">20%</div><div class="lbl">Organic Traffic Growth</div></div>
+<div class="stat-card animate"><div class="num">Top 5</div><div class="lbl">GBP Rankings</div></div>
+<div class="stat-card animate"><div class="num">4+</div><div class="lbl">Projects Managed</div></div>
+</div>
+</section>
+<section class="skills-bg" id="skills">
+<div class="section-header animate"><div class="section-tag">Expertise</div><h2>Technical Skills</h2><p>A comprehensive toolkit for driving digital growth</p></div>
+<div class="skills-grid">
+<div class="skill-cat animate"><div class="skill-cat-icon">&#128269;</div><h3>SEO Tools</h3><div class="skill-tags"><span class="skill-tag">Screaming Frog</span><span class="skill-tag">SEMrush</span><span class="skill-tag">Ahrefs</span><span class="skill-tag">Google Search Console</span><span class="skill-tag">Keyword Planner</span></div></div>
+<div class="skill-cat animate"><div class="skill-cat-icon">&#128202;</div><h3>Analytics &amp; Tracking</h3><div class="skill-tags"><span class="skill-tag">Google Analytics GA4</span><span class="skill-tag">Google Tag Manager</span><span class="skill-tag">Looker Studio</span></div></div>
+<div class="skill-cat animate"><div class="skill-cat-icon">&#129302;</div><h3>AI &amp; Automation</h3><div class="skill-tags"><span class="skill-tag">LLM Prompt Engineering</span><span class="skill-tag">Brevo</span><span class="skill-tag">BuzzStream</span></div></div>
+<div class="skill-cat animate"><div class="skill-cat-icon">&#9881;</div><h3>SEO Techniques</h3><div class="skill-tags"><span class="skill-tag">On-page SEO</span><span class="skill-tag">Off-page SEO</span><span class="skill-tag">Technical SEO</span><span class="skill-tag">CRO</span><span class="skill-tag">A/B Testing</span></div></div>
+<div class="skill-cat animate"><div class="skill-cat-icon">&#128231;</div><h3>Outreach &amp; Marketing</h3><div class="skill-tags"><span class="skill-tag">Guest Posting</span><span class="skill-tag">PR Outreach</span><span class="skill-tag">Podcast Outreach</span><span class="skill-tag">Email Marketing</span></div></div>
+<div class="skill-cat animate"><div class="skill-cat-icon">&#128187;</div><h3>Web &amp; Data</h3><div class="skill-tags"><span class="skill-tag">WordPress</span><span class="skill-tag">HTML Basics</span><span class="skill-tag">Microsoft Excel</span></div></div>
+</div>
+</section>
+<section id="experience">
+<div class="section-header animate"><div class="section-tag">Career</div><h2>Professional Experience</h2><p>Building expertise across SEO, outreach, and digital strategy</p></div>
+<div class="exp-timeline">
+<div class="exp-item animate"><div class="exp-dot">&#128640;</div><div class="exp-card"><div class="exp-header"><span class="exp-role">SEO Specialist</span><span class="exp-period">Present</span></div><div class="exp-company"><i class="fas fa-building"></i> [Company &mdash; Confidential]</div><ul><li>Managing end-to-end SEO strategy for 4 major projects across multiple domains</li><li>Conducting LLM-based market analysis to identify growth opportunities</li><li>Achieved Top 5 Google Business Profile rankings through Local SEO optimization</li><li>Implemented GTM and GA4 tracking for performance measurement</li><li>Executed CRO strategies and A/B testing to improve conversion funnels</li></ul></div></div>
+<div class="exp-item animate"><div class="exp-dot">&#128236;</div><div class="exp-card"><div class="exp-header"><span class="exp-role">Email Marketing &amp; Outreach Specialist</span><span class="exp-period">6 Months</span></div><div class="exp-company"><i class="fas fa-building"></i> [Company &mdash; Confidential]</div><ul><li>Executed large-scale outreach campaigns for high-quality backlink acquisition</li><li>Built authority links via guest posting, PR, and podcast collaborations</li><li>Automated outreach workflows using Brevo and BuzzStream</li></ul></div></div>
+<div class="exp-item animate"><div class="exp-dot">&#127891;</div><div class="exp-card"><div class="exp-header"><span class="exp-role">SEO Intern</span><span class="exp-period">Jul 2024 &ndash; Dec 2024</span></div><div class="exp-company"><i class="fas fa-building"></i> [Company &mdash; Confidential]</div><ul><li>Improved organic traffic by 10% through keyword research and on-page optimization</li><li>Supported link-building initiatives, increasing domain authority by 10%</li><li>Performed technical SEO audits and resolved site performance issues</li></ul></div></div>
+</div>
+</section>
+<section class="projects-bg" id="projects">
+<div class="section-header animate"><div class="section-tag">Work</div><h2>Key Projects &amp; Achievements</h2><p>Delivering measurable results through strategic SEO execution</p></div>
+<div class="projects-grid">
+<div class="project-card animate"><div class="project-img-placeholder">&#128200;</div><div class="project-body"><h3>SERP Visibility Optimization</h3><p>Improved SERP visibility by 15% through targeted keyword optimization and strategic content planning across multiple domains.</p><div class="project-tags"><span class="project-tag">On-page SEO</span><span class="project-tag">Keyword Research</span><span class="project-tag">SERP</span></div></div></div>
+<div class="project-card animate"><div class="project-img-placeholder">&#127978;</div><div class="project-body"><h3>Local Business Organic Growth</h3><p>Delivered 20% organic traffic growth for a local business website through Local SEO and Google Business Profile optimization.</p><div class="project-tags"><span class="project-tag">Local SEO</span><span class="project-tag">GBP</span><span class="project-tag">Traffic Growth</span></div></div></div>
+<div class="project-card animate"><div class="project-img-placeholder">&#128279;</div><div class="project-body"><h3>Authority Backlink Campaigns</h3><p>Built strong backlink profiles via authority media placements, PR outreach, and podcast collaborations, boosting domain authority.</p><div class="project-tags"><span class="project-tag">Link Building</span><span class="project-tag">PR Outreach</span><span class="project-tag">Domain Authority</span></div></div></div>
+<div class="project-card animate gsc-card"><div class="gsc-header"><i class="fab fa-google" style="color:#00c9a7"></i><span>Google Search Console &mdash; Performance Snapshot</span></div><div class="gsc-img-wrap"><div class="gsc-stats"><div class="gsc-stat"><div class="v">325</div><div class="l">Total Clicks</div></div><div class="gsc-stat"><div class="v">117k</div><div class="l">Impressions</div></div><div class="gsc-stat"><div class="v">+107%</div><div class="l">Click Growth</div></div></div><div style="text-align:center;margin-top:8px;"><span class="gsc-badge"><i class="fas fa-chart-line"></i> Real GSC Data &mdash; Client Confidential</span></div></div><div class="project-body"><h3>Multi-Domain SEO Performance</h3><p>Managed end-to-end SEO for multiple projects resulting in 107% click growth and 117k impressions tracked via Google Search Console.</p><div class="project-tags"><span class="project-tag">GA4</span><span class="project-tag">GSC</span><span class="project-tag">CRO</span><span class="project-tag">GTM</span></div></div></div>
+<div class="project-card animate"><div class="project-img-placeholder">&#9889;</div><div class="project-body"><h3>Integrated SEO Campaigns</h3><p>Executed integrated SEO campaigns combining technical SEO, content strategy, and link building to deliver high ROI results for clients.</p><div class="project-tags"><span class="project-tag">Technical SEO</span><span class="project-tag">Content Strategy</span><span class="project-tag">High ROI</span></div></div></div>
+<div class="project-card animate"><div class="project-img-placeholder">&#129302;</div><div class="project-body"><h3>LLM-Driven Market Analysis</h3><p>Leveraged LLM prompt engineering to conduct in-depth market analysis, identifying growth opportunities and informing SEO strategy.</p><div class="project-tags"><span class="project-tag">LLM</span><span class="project-tag">Prompt Engineering</span><span class="project-tag">Market Analysis</span></div></div></div>
+</div>
+</section>
+<section id="education">
+<div class="section-header animate"><div class="section-tag">Background</div><h2>Education</h2><p>Academic foundation combined with professional digital marketing training</p></div>
+<div class="edu-grid">
+<div class="edu-card animate"><div class="edu-icon">&#127891;</div><h3>Bachelor of Business Administration (BBA)</h3><div class="inst">Army Institute of Management &amp; Technologies</div><div class="period"><i class="fas fa-calendar"></i> 2020 &ndash; 2023</div></div>
+<div class="edu-card animate"><div class="edu-icon">&#128241;</div><h3>Digital Marketing Course</h3><div class="inst">Digiam Pvt. Ltd.</div><div class="period"><i class="fas fa-calendar"></i> Feb 2024 &ndash; Mar 2024</div></div>
+<div class="edu-card animate"><div class="edu-icon">&#127979;</div><h3>Intermediate &amp; High School</h3><div class="inst">Army Public School, Ambala</div><div class="period"><i class="fas fa-graduation-cap"></i> School Education</div></div>
+</div>
+</section>
+<section class="contact-bg" id="contact">
+<div class="section-header animate"><div class="section-tag">Connect</div><h2>Get In Touch</h2><p>Let's discuss how I can help grow your digital presence</p></div>
+<div class="contact-wrapper"><div class="contact-links">
+<a href="mailto:ms14oct2001@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> ms14oct2001@gmail.com</a>
+<a href="tel:8295310332" class="contact-link"><i class="fas fa-phone"></i> 8295310332</a>
+<a href="#" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="#" class="contact-link"><i class="fab fa-quora"></i> Quora</a>
+<a href="#" class="contact-link"><i class="fab fa-pinterest"></i> Pinterest</a>
+<a href="#" class="contact-link"><i class="fas fa-paint-brush"></i> Canva Portfolio</a>
+</div></div>
+</section>
+<footer><p>Crafted with <span>&#9829;</span> by <span>Meghendra Dev Sharma</span> &nbsp;|&nbsp; SEO Specialist &amp; Outreach Expert</p></footer>
+<script>
+const observer=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');observer.unobserve(en.target);}});},{threshold:0.1});
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
